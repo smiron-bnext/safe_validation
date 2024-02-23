@@ -35,7 +35,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.example.safe_validation
+        package: mx.bnext.safe_validation
         pluginClass: SafeValidationPlugin
       ios:
         pluginClass: SafeValidationPlugin
