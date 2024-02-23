@@ -20,9 +20,9 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
+import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 
-
-public class SafeValidationPlugin extends FlutterActivity implements FlutterPlugin, MethodCallHandler {
+public class SafeValidationPlugin implements FlutterPlugin, MethodCallHandler {
     private Context context;
     private static LocationAssistantListener locationAssistantListener;
     private static final String CHANNEL = "safe_validation";
@@ -58,7 +58,7 @@ public class SafeValidationPlugin extends FlutterActivity implements FlutterPlug
                 locationAssistantListener = new LocationAssistantListener(context);
                 result.success(true);
             }*/
-            result.success(true);
+            result.success(false);
         }else if (call.method.equals("isRealDevice")) {
             result.success(!EmulatorCheck.isEmulator());
         }else if (call.method.equals("isOnExternalStorage")) {
