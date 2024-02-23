@@ -35,7 +35,7 @@ public class SafeValidationPlugin extends FlutterActivity implements FlutterPlug
                 CHANNEL
         );
         channel.setMethodCallHandler(this);
-        locationAssistantListener = new LocationAssistantListener(context);
+        //locationAssistantListener = new LocationAssistantListener(context);
     }
 
     @Override
@@ -50,14 +50,15 @@ public class SafeValidationPlugin extends FlutterActivity implements FlutterPlug
         } else if (call.method.equals("isJailBroken")) {
             result.success(RootedCheck.isJailBroken(context));
         }else if (call.method.equals("isMockLocation")) {
-            if (locationAssistantListener.isMockLocationsDetected()) {
+            /*if (locationAssistantListener.isMockLocationsDetected()) {
                 result.success(true);
             } else if (locationAssistantListener.getLatitude() != null && locationAssistantListener.getLongitude() != null) {
                 result.success(false);
             } else {
                 locationAssistantListener = new LocationAssistantListener(context);
                 result.success(true);
-            }
+            }*/
+            result.success(true);
         }else if (call.method.equals("isRealDevice")) {
             result.success(!EmulatorCheck.isEmulator());
         }else if (call.method.equals("isOnExternalStorage")) {
