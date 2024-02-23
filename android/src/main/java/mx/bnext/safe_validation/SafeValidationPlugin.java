@@ -27,14 +27,6 @@ public class SafeValidationPlugin extends FlutterActivity implements FlutterPlug
     private static LocationAssistantListener locationAssistantListener;
     private static final String CHANNEL = "safe_validation";
 
-    @SuppressWarnings("deprecation")
-    public static void registerWith(Registrar registrar) {
-        final MethodChannel channel = new MethodChannel(registrar.messenger(), CHANNEL);
-        channel.setMethodCallHandler(new TrustLocationPlugin());
-        context = registrar.context();
-        locationAssistantListener = new LocationAssistantListener(context);
-    }
-
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {
         this.context = binding.getApplicationContext();
