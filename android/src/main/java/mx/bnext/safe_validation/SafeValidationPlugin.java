@@ -25,6 +25,7 @@ import io.flutter.plugin.common.MethodChannel.Result;
 public class SafeValidationPlugin extends FlutterActivity implements FlutterPlugin, MethodCallHandler {
     private Context context;
     private static LocationAssistantListener locationAssistantListener;
+    private static final String CHANNEL = "safe_validation";
 
     @SuppressWarnings("deprecation")
     public static void registerWith(Registrar registrar) {
@@ -39,7 +40,7 @@ public class SafeValidationPlugin extends FlutterActivity implements FlutterPlug
         this.context = binding.getApplicationContext();
         final MethodChannel channel = new MethodChannel(
                 binding.getBinaryMessenger(),
-                "safe_validation"
+                CHANNEL
         );
         channel.setMethodCallHandler(this);
         locationAssistantListener = new LocationAssistantListener(context);
