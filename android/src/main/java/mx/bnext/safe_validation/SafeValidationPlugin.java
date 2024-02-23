@@ -22,7 +22,7 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 
 
-public class SafeValidationPlugin implements FlutterPlugin, MethodCallHandler {
+public class SafeValidationPlugin extends FlutterActivity implements FlutterPlugin, MethodCallHandler {
     private Context context;
     private static LocationAssistantListener locationAssistantListener;
     private static final String CHANNEL = "safe_validation";

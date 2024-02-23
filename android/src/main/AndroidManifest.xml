@@ -2,7 +2,6 @@
   package="mx.bnext.safe_validation">
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!--
     <application>
         <activity android:name=".SafeValidationPlugin"
             android:launchMode="singleTop"
@@ -12,5 +11,4 @@
             android:windowSoftInputMode="adjustResize">
         </activity>
     </application>
-    -->
 </manifest>
