@@ -25,7 +25,7 @@ import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 public class SafeValidationPlugin implements FlutterPlugin, MethodCallHandler {
     private Context context;
     private static LocationAssistantListener locationAssistantListener;
-    private static final String CHANNEL = "safe_validation";
+    private static final String CHANNEL = "safe_device";
 
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {
