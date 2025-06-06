@@ -15,7 +15,6 @@ import mx.bnext.safe_validation.Rooted.RootedCheck;
 import mx.bnext.safe_validation.Location.LocationAssistant;
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
-import io.flutter.app.FlutterActivity;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
